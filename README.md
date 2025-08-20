@@ -25,13 +25,22 @@ A simple, universal installer script to set up **Ngrok** on Termux (Android) wit
 ## Installation
 
 You can install the script directly from GitHub and run it:
-
+### 1. Download the installer script
 ```bash
-# Download the installer script
 wget https://raw.githubusercontent.com/SameerDeshmukh37/Ngrok-in-Termux/main/ngrok_install.sh -O ngrok_install.sh
+```
 
-# Make it executable
+### 2. Make it executable
+```bash
 chmod +x ngrok_install.sh
+```
 
-# Run the installer
+### 3. Run the installer
+```bash
 ./ngrok_install.sh
+```
+
+### Alternative: Single command to install
+```bash
+bash <(curl -s https://raw.githubusercontent.com/SameerDeshmukh37/Ngrok-in-Termux/main/ngrok_install.sh)
+```
