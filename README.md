@@ -31,7 +31,7 @@ You can install the script directly from GitHub and run it:
 wget https://raw.githubusercontent.com/SameerDeshmukh37/Ngrok-in-Termux/main/ngrok_install.sh -O ngrok_install.sh
 
 # Make it executable
-chmod +x install-ngrok.sh
+chmod +x ngrok_install.sh
 
 # Run the installer
-./install-ngrok.sh
+./ngrok_install.sh
