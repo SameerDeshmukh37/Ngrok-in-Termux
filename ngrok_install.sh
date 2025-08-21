@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # Universal Ngrok Auto Installer for Termux
 # Supports ARM, ARM64, x86, x86_64
-# Author: Sam's Script
+# Author: Sameer Deshmukh
 
 # Colors
 RED='\033[0;31m'
