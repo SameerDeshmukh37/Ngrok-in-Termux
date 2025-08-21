@@ -10,6 +10,9 @@ CYAN='\033[0;36m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
+# First install required tools
+pkg install -y coreutils >/dev/null 2>&1 &
+
 # Progress bar function
 progress_bar() {
     local pid=$1
@@ -20,7 +23,7 @@ progress_bar() {
     while kill -0 $pid 2>/dev/null; do
         i=$(( (i+1) %4 ))
         printf "\r⏳ Progress: [${spin:$i:1}]"
-        command sleep $delay
+        sleep $delay
     done
     printf "\r✅ Done!                    \n"
 }
