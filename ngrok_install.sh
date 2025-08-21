@@ -20,7 +20,7 @@ progress_bar() {
     while kill -0 $pid 2>/dev/null; do
         i=$(( (i+1) %4 ))
         printf "\r⏳ Progress: [${spin:$i:1}]"
-        sleep $delay
+        command sleep $delay
     done
     printf "\r✅ Done!                    \n"
 }
@@ -97,6 +97,10 @@ echo -e "⚠ Make sure Mobile Hotspot or Wi-Fi is ON before starting Ngrok."
 echo -e "\n👨‍💻 Script by: ${CYAN}Sameer Deshmukh${NC}"
 
 # Fix USER warning for ngrok
+if [ ! -f ~/.bashrc ]; then
+    touch ~/.bashrc
+fi
+
 if ! grep -q "export USER=termux" ~/.bashrc; then
     echo 'export USER=termux' >> ~/.bashrc
 fi
